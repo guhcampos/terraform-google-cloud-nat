@@ -39,7 +39,7 @@ resource "google_compute_router_nat" "main" {
   router = "${var.router}"
 
   nat_ip_allocate_option             = "${local.nat_ip_allocate_option}"
-  nat_ips                            = ["${var.nat_ips}"]
+  nat_ips                            = "${var.nat_ips}"
   source_subnetwork_ip_ranges_to_nat = "${var.source_subnetwork_ip_ranges_to_nat}"
 
   min_ports_per_vm                 = "${var.min_ports_per_vm}"
